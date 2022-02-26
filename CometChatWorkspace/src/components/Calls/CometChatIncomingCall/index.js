@@ -270,10 +270,10 @@ class CometChatIncomingCall extends React.PureComponent {
 			incomingCallAlert = null;
 		if (this.state.incomingCall) {
 			let callType = (
-				<>
+				<React.Fragment>
 					<i css={callIconStyle(audioCallIcon, this.context)} title={Translator.translate("INCOMING_AUDIO_CALL", this.props.lang)}></i>
 					<span>{Translator.translate("INCOMING_AUDIO_CALL", this.props.lang)}</span>
-				</>
+				</React.Fragment>
 			);
 			if (this.state.incomingCall.type === CometChat.CALL_TYPE.VIDEO) {
 				callType = (
